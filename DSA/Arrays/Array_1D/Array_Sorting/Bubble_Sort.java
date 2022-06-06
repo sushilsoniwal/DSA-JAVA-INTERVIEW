@@ -14,7 +14,7 @@ public class Bubble_Sort {
     /*
      * Bubble Sort:- Swap two adjacent elements if they are in wrong order.
      * Stable Sorting Algorithm (Order before sorting == Order after sorting).
-     * Time Complexity => O(n^2) In worst case & O(n).
+     * Time Complexity => O(n^2) In worst case & O(n) in best case.
      * Space Complexity => O(1).
      */
 
