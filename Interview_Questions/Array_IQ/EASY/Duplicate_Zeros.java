@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class Duplicate_Zeros {
     public static void main(String[] args) {
         int[] arr = { 1, 0, 2, 3, 0, 4, 5, 0 };
-        duplicateZeros(arr);
+        duplicateZeros2(arr);
         System.out.println(Arrays.toString(arr));
     }
 
@@ -21,19 +21,17 @@ public class Duplicate_Zeros {
      * Space Complexity = 0(1).
      */
 
-    /*
-     * static void duplicateZeros(int[] arr) {
-     * int n = arr.length;
-     * for (int i = 0; i < n - 1; i++) { // Traversing the array.
-     * if (arr[i] == 0) {
-     * for (int j = n - 2; j >= i; j--) {
-     * arr[j + 1] = arr[j]; // Shifting The elements
-     * }
-     * i++; // incrementing i by 1
-     * }
-     * }
-     * }
-     */
+    static void duplicateZeros1(int[] arr) {
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) { // Traversing the array.
+            if (arr[i] == 0) {
+                for (int j = n - 2; j >= i; j--) {
+                    arr[j + 1] = arr[j]; // Shifting The elements
+                }
+                i++; // incrementing i by 1
+            }
+        }
+    }
 
     /*
      * Better Approach:-
@@ -45,7 +43,7 @@ public class Duplicate_Zeros {
      * Space Complexity = 0(1).
      */
 
-    static void duplicateZeros(int[] arr) {
+    static void duplicateZeros2(int[] arr) {
         int n = arr.length, count = 0;
 
         for (int num : arr) {
@@ -57,12 +55,10 @@ public class Duplicate_Zeros {
         int j = n + count - 1;
 
         while (i >= 0 && j >= 0) {
-
             if (arr[i] != 0) {
                 if (j < n) {
                     arr[j] = arr[i];
                 }
-
             } else {
                 if (j < n) {
                     arr[j] = arr[i];
@@ -72,7 +68,6 @@ public class Duplicate_Zeros {
                     arr[j] = arr[i];
                 }
             }
-
             i--;
             j--;
         }
