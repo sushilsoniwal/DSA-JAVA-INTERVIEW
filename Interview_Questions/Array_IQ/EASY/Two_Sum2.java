@@ -47,7 +47,6 @@ public class Two_Sum2 {
      */
 
     static int[] twoSum2(int[] nums, int target) {
-        int[] ans;
         int s = 0;
         int e = nums.length - 1;
         while (s <= e) {
