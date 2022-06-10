@@ -1,11 +1,11 @@
-// Remove Elements:- https://leetcode.com/problems/check-if-n-and-its-double-exist/
+// Check if n and its double exists:- https://leetcode.com/problems/check-if-n-and-its-double-exist/
 
 package Interview_Questions.Array_IQ.EASY;
 
 import java.util.Arrays;
 import java.util.HashSet;
 
-public class Remove_Element {
+public class Exists_Double {
     public static void main(String[] args) {
         int[] arr = { 10, 2, 5, 3 };
         System.out.println(checkIfExist(arr));
